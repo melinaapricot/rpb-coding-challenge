@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>Hello this is DestinationListView</h2>
-    <p>This is a paragraph</p>
+    <h2>Länder, Regionen, Orte</h2>
+    <p>Lorem Ipsum Länder, Regionen, Orte</p>
     <DestinationCard/>
   </div>
 </template>
