@@ -1,5 +1,7 @@
 <template>
-  <div>Hello this is DestinationListView Component
+  <div>
+    <h1>Hello this is DestinationListView</h1>
+    <p>This is a paragraph</p>
     <DestinationCard/>
   </div>
 </template>
