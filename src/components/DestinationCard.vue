@@ -1,11 +1,42 @@
 <template>
   <div>
-    Hello this is Destination Card!
+    <div class="card">
+      <img class="card__img" src="https://images.flux.reisen/hotel/1262/1/s" alt="This is an irrelevant stock picture for testing">
+      <div class="card__description">
+        <p class="card__description--destination">Country</p>
+        <p class="card__description--price">258€</p>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
+<script lang="js">
+
+
 </script>
 
-<style>
+<style lang="css">
+  .card {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .card__img {
+    border-radius: 15px;
+    object-fit: cover;
+    width: 287px;
+    height: 177px;
+  }
+  .card__description {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
+  .card__description--destination {
+    color: var(--primary);
+  }
+  .card__description--price {
+    color: var(--magenta);
+  }
 </style>
