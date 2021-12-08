@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hello this is DestinationListView</h1>
+    <h2>Hello this is DestinationListView</h2>
     <p>This is a paragraph</p>
     <DestinationCard/>
   </div>
