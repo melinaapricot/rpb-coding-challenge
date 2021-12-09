@@ -1,10 +1,10 @@
 <template>
   <div>
     <div v-for="destination of destinations" class="card" :key="destination.title">
-      <img class="card__img" src="https://images.flux.reisen/hotel/1262/1/s" alt="This is an irrelevant stock picture for testing">
+      <img class="card__img" :src="destination.image" alt="Photograph of the destination">
       <div class="card__description">
         <p class="card__description--destination">{{destination.text}}</p>
-        <p class="card__description--price">258€</p>
+        <p class="card__description--price"><span>ab </span>{{destination.price}}</p>
       </div>
     </div>
   </div>
@@ -55,4 +55,8 @@
   .card__description--price {
     color: var(--purple);
   }
+  .card__description--price span {
+    font-size: 12px;
+  }
+
 </style>
