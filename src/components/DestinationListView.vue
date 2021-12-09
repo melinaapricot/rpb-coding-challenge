@@ -24,7 +24,6 @@
 
 <script>
 import DestinationCard from "./DestinationCard";
-import DataProvider from "../io/DataProvider";
 
 export default {
   name: 'DestinationListView',
@@ -37,8 +36,11 @@ export default {
       error: "",
     };
   },
+  props: {
+    dataProvider: Object
+  },
   mounted() {
-    new DataProvider()
+    this.dataProvider
         .fetchData()
         .then(data => this.destinations = data)
         .catch(() => this.error = "Could not fetch destination data :(");
@@ -50,7 +52,7 @@ export default {
   .list-view {
     margin-top: 19px;
   }
-  
+
   .header-wrapper {
     display: flex;
     justify-content: space-between;
