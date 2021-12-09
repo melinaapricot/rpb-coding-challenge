@@ -35,10 +35,13 @@
   .card {
     display: inline-flex;
     flex-direction: column;
+    box-shadow:  -2px 2px 0 var(--green);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: 23px;
   }
 
   .card__img {
-    border-radius: 15px;
     object-fit: cover;
     width: 287px;
     height: 177px;
