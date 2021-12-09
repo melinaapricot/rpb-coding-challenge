@@ -21,8 +21,6 @@ export default {
 
 <style scoped>
 .card {
-  display: inline-flex;
-  flex-direction: column;
   box-shadow: -2px 2px 0 var(--green);
   border-radius: 15px;
   overflow: hidden;
