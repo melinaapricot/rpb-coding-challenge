@@ -10,11 +10,13 @@
         Alle
       </a>
     </div>
-    <p>Lorem Ipsum Länder, Regionen, Orte</p>
+    <p class="description">Lorem Ipsum Länder, Regionen, Orte</p>
 
-    <div class="card-list">
+    <div class="card-overlay-wrapper">
       <div class="card-overlay"/>
-      <DestinationCard v-for="destination of destinations" :key="destination.text" :destination="destination"/>
+      <div class="card-list">
+        <DestinationCard v-for="destination of destinations" :key="destination.text" :destination="destination"/>
+      </div>
     </div>
   </div>
 </template>
@@ -45,7 +47,7 @@ export default {
 
 <style scoped>
 .list-view {
-  margin: 19px 0 0 19px;
+  margin-top: 19px;
 }
 
 .header-wrapper {
@@ -53,10 +55,16 @@ export default {
   justify-content: space-between;
   align-items: baseline;
   margin-right: 23px;
+  margin-left: 19px;
+}
+
+.description {
+  margin-left: 19px;
 }
 
 .all-destinations {
   color: var(--primary);
+  margin-left: 44px;
 }
 
 .all-destinations:link {
@@ -64,16 +72,21 @@ export default {
 }
 
 .card-list {
+  overflow: auto;
   display: flex;
   gap: 23px;
-  padding-right: 16px;
-  overflow: auto;
-  margin-top: 25px;
+  padding: 16px 16px 16px 19px;
+  margin-top: 9px;
+}
+
+.card-overlay-wrapper {
+  position: relative;
 }
 
 .card-overlay {
   position: absolute;
   right: 0;
+  top: 0;
   background: linear-gradient(to left, var(--white), transparent);
   z-index: 5;
   height: 100%;
