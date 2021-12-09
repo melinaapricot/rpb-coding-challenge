@@ -37,8 +37,8 @@ export default {
     };
   },
   mounted() {
-    const provider = new DataProvider();
-    provider.fetchData()
+    new DataProvider()
+        .fetchData()
         .then(data => this.destinations = data)
         .catch(() => this.error = "Could not fetch destination data")
   }
