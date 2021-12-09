@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
   .card {
-    box-shadow: -2px 2px 0 var(--green);
+    box-shadow: -2px 2px 0 var(--accent);
     border-radius: 15px;
     overflow: hidden;
     flex-shrink: 0;
@@ -46,12 +46,12 @@ export default {
   }
 
   .price {
-    color: var(--purple);
+    color: var(--secondary);
     font-weight: 600;
   }
 
   .price-from {
-    color: var(--purple);
+    color: var(--secondary);
     font-size: 0.75rem;
   }
 </style>
