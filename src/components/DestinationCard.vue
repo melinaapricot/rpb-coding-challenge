@@ -1,12 +1,15 @@
 <template>
 
-  <div class="card__wrapper" :key="destination.title">
-    <img class="card__img" :src="destination.image" alt="Photograph of the destination">
-    <div class="card__description">
-      <p class="card__description--destination">{{ destination.text }}</p>
-      <p class="card__description--price"><span>ab </span>{{ destination.price }}</p>
+  <a class="card" :key="destination.title" :href="destination.link">
+    <img class="img" :src="destination.image" alt="Photograph of the destination">
+    <div class="description">
+      <span class="destination">{{ destination.text }}</span>
+      <div>
+        <span class="price-from">ab </span>
+        <span class="price">€ {{ destination.price }}</span>
+      </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script lang="js">
@@ -16,39 +19,42 @@ export default {
 
 </script>
 
-<style lang="css">
-.card__wrapper {
+<style scoped>
+.card {
   display: inline-flex;
   flex-direction: column;
   box-shadow: -2px 2px 0 var(--green);
   border-radius: 15px;
   overflow: hidden;
   flex-shrink: 0;
+  text-decoration: none;
 
 }
 
-
-.card__img {
+.img {
   object-fit: cover;
   width: 287px;
   height: 177px;
 }
 
-.card__description {
+.description {
   display: flex;
   justify-content: space-between;
   padding: 12px;
 }
 
-.card__description--destination {
+.destination {
   color: var(--primary);
+  font-weight: bold;
 }
 
-.card__description--price {
+.price {
   color: var(--purple);
+  font-weight: 600;
 }
 
-.card__description--price span {
+.price-from {
+  color: var(--purple);
   font-size: 12px;
 }
 
