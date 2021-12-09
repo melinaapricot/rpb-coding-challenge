@@ -26,7 +26,6 @@ export default {
     overflow: hidden;
     flex-shrink: 0;
     text-decoration: none;
-
   }
 
   .img {
@@ -53,6 +52,6 @@ export default {
 
   .price-from {
     color: var(--purple);
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 </style>

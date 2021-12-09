@@ -1,7 +1,7 @@
 <template>
   <div class="list-view">
     <div class="header-wrapper">
-      <h2>Länder, Regionen, Orte</h2>
+      <h2 class="headline">Länder, Regionen, Orte</h2>
       <a
           class="all-destinations"
           href="https://github.com/melinaapricot/rpb-coding-challenge"
@@ -61,8 +61,13 @@ export default {
     margin-left: 19px;
   }
 
+  .headline {
+    font-size: 1.5rem;
+  }
+
   .description {
     margin-left: 19px;
+    font-size: 1rem;
   }
 
   .all-destinations {
@@ -99,5 +104,6 @@ export default {
   .error-message {
     color: red;
     margin: 24px;
+    font-size: 1.25rem;
   }
 </style>
