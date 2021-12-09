@@ -38,6 +38,7 @@
     overflow: auto;
     display: flex;
     padding-bottom: 4px;
+    gap: 23px;
   }
 
   .card__overlay {
@@ -55,8 +56,8 @@
     box-shadow:  -2px 2px 0 var(--green);
     border-radius: 15px;
     overflow: hidden;
-    margin-left: 23px;
     flex-shrink: 0;
+
   }
 
 
