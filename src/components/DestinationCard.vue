@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="card">
+    <div v-for="destination of destinations" class="card" :key="destination.title">
       <img class="card__img" src="https://images.flux.reisen/hotel/1262/1/s" alt="This is an irrelevant stock picture for testing">
       <div class="card__description">
-        <p class="card__description--destination">Country</p>
+        <p class="card__description--destination">{{destination.text}}</p>
         <p class="card__description--price">258€</p>
       </div>
     </div>
@@ -11,7 +11,23 @@
 </template>
 
 <script lang="js">
+  import DataProvider from "../io/DataProvider";
 
+  export default {
+    data() {
+      return {
+        destinations: [],
+        error: "",
+      };
+    },
+    mounted() {
+      const provider = new DataProvider();
+      provider.fetchData()
+        .then(data => this.destinations = data)
+        .catch(() => this.error = "Could not fetch destination data")
+
+    }
+  }
 
 </script>
 
@@ -37,6 +53,6 @@
     color: var(--primary);
   }
   .card__description--price {
-    color: var(--magenta);
+    color: var(--purple);
   }
 </style>
