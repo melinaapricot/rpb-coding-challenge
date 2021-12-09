@@ -2,7 +2,13 @@
   <div class="list-view">
     <div class="header-wrapper">
       <h2>Länder, Regionen, Orte</h2>
-      <a class="all-countries" href="#">Alle</a>
+      <a
+          class="all-destinations"
+          href="https://github.com/melinaapricot/rpb-coding-challenge"
+          target="_blank"
+          rel="noreferrer">
+        Alle
+      </a>
     </div>
     <p>Lorem Ipsum Länder, Regionen, Orte</p>
 
@@ -39,36 +45,36 @@ export default {
 
 <style scoped>
 .list-view {
-  margin-left: 19px;
+  margin: 19px 0 0 19px;
 }
 
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
-
+  margin-right: 23px;
 }
 
-.all-countries {
+.all-destinations {
   color: var(--primary);
 }
 
-.all-countries:link {
+.all-destinations:link {
   text-decoration: none;
 }
 
 .card-list {
-  overflow: auto;
   display: flex;
-  padding-right: 16px;
   gap: 23px;
+  padding-right: 16px;
+  overflow: auto;
+  margin-top: 25px;
 }
 
 .card-overlay {
   position: absolute;
   right: 0;
-  background: linear-gradient(to left, white, transparent);
+  background: linear-gradient(to left, var(--white), transparent);
   z-index: 5;
   height: 100%;
   width: 22px
