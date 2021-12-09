@@ -1,6 +1,7 @@
 <template>
-  <div class="card-wrapper">
-    <div v-for="destination of destinations" class="card" :key="destination.title">
+  <div class="card">
+    <div class="card__overlay"/>
+    <div v-for="destination of destinations" class="card__wrapper" :key="destination.title">
       <img class="card__img" :src="destination.image" alt="Photograph of the destination">
       <div class="card__description">
         <p class="card__description--destination">{{destination.text}}</p>
@@ -33,13 +34,22 @@
 
 <style lang="css">
 
-  .card-wrapper {
-   overflow: auto;
+  .card {
+    overflow: auto;
     display: flex;
     padding-bottom: 4px;
   }
 
-  .card {
+  .card__overlay {
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+    z-index: 5;
+    height: 225px;
+    width: 22px
+  }
+
+  .card__wrapper {
     display: inline-flex;
     flex-direction: column;
     box-shadow:  -2px 2px 0 var(--green);
@@ -48,6 +58,7 @@
     margin-left: 23px;
     flex-shrink: 0;
   }
+
 
   .card__img {
     object-fit: cover;
