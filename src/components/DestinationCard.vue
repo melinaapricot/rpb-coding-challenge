@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="card-wrapper">
     <div v-for="destination of destinations" class="card" :key="destination.title">
       <img class="card__img" :src="destination.image" alt="Photograph of the destination">
       <div class="card__description">
@@ -32,6 +32,13 @@
 </script>
 
 <style lang="css">
+
+  .card-wrapper {
+   overflow: auto;
+    display: flex;
+    padding-bottom: 4px;
+  }
+
   .card {
     display: inline-flex;
     flex-direction: column;
@@ -39,6 +46,7 @@
     border-radius: 15px;
     overflow: hidden;
     margin-left: 23px;
+    flex-shrink: 0;
   }
 
   .card__img {
