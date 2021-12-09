@@ -28,6 +28,10 @@ export default {
     text-decoration: none;
   }
 
+  .card:focus {
+    box-shadow: -4px 4px 0 var(--secondary);
+  }
+
   .img {
     object-fit: cover;
     width: 287px;

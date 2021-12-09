@@ -1,6 +1,6 @@
 <template>
-  <div class="list-view">
-    <div class="header-wrapper">
+  <section class="list-view">
+    <header class="header-wrapper">
       <h2>Länder, Regionen, Orte</h2>
       <a
           class="all-destinations"
@@ -9,17 +9,17 @@
           rel="noreferrer">
         Alle
       </a>
-    </div>
+    </header>
     <p class="description">Lorem Ipsum Länder, Regionen, Orte</p>
 
     <div v-if="!error" class="card-overlay-wrapper">
-      <div class="card-overlay"/>
+      <span class="card-overlay"/>
       <div class="card-list">
         <DestinationCard v-for="destination of destinations" :key="destination.text" :destination="destination"/>
       </div>
     </div>
-    <div v-else class="error-message">{{error}}</div>
-  </div>
+    <p v-else class="error-message">{{error}}</p>
+  </section>
 </template>
 
 <script>
