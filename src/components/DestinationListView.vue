@@ -68,7 +68,7 @@ export default {
 
   .all-destinations {
     color: var(--primary);
-    margin-left: 36px;
+    margin-left: 34px;
   }
 
   .all-destinations:link {
