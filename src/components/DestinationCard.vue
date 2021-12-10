@@ -1,5 +1,4 @@
 <template>
-
   <a class="card" :key="destination.text" :href="destination.link">
     <img class="img" :src="destination.image" :alt="'Photograph of destination ' + destination.text">
     <div class="description">
