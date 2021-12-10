@@ -1,7 +1,10 @@
 # Notes
 
-##### Deutsch
+**Run dev server**: `npm run start`
 
+**Run unit tests**: `npm run test:unit`
+
+### Deutsch
 
 - Ich habe text field also den Namen des Landes/Flugziels als :key property für den v-for loop genommen da es keine andere spezielle ID gab. Im Idealfall sollte es einen bestimmten ID field geben.
 
@@ -11,9 +14,10 @@
 
 - Ich habe auch ein bisschen extra padding unter dem card-list div hinzugefügt damit es in desktop browsers besser aussieht da das scrollbar die untere box-shadow der Card Elemente sonst bedecken würde.
 
+
 ___
 
-##### English
+### English
 
 
 - I have used the text field (country/destination name) as a unique identifier for the :key property in the v-for loop as there was no other special ID provided. Ideally there should be a unique ID field.
