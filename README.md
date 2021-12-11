@@ -6,6 +6,8 @@
 
 ### Deutsch
 
+- Ich habe das fetching der Daten mit promises simuliert so dass sie durch ein Netzwerk request einfach ersetzt werden könnten. 
+
 - Ich habe text field also den Namen des Landes/Flugziels als :key property für den v-for loop genommen da es keine andere spezielle ID gab. Im Idealfall sollte es einen bestimmten ID field geben.
 
 - Focused und active Elemente haben eine dickere violette outline. I habe das wegen accessibility Gründen gemacht, so that Nützer auch mit der Tastatur navigieren können. Natürlich ist das design dem designer überlassen.
@@ -14,11 +16,11 @@
 
 - Ich habe auch ein bisschen extra padding unter dem card-list div hinzugefügt damit es in desktop browsers besser aussieht da das scrollbar die untere box-shadow der Card Elemente sonst bedecken würde.
 
-
 ___
 
 ### English
 
+- I simulated the fetching of the data in a promise based way so that it could be easily replaced by real data fetching from the network.
 
 - I have used the text field (country/destination name) as a unique identifier for the :key property in the v-for loop as there was no other special ID provided. Ideally there should be a unique ID field.
 
