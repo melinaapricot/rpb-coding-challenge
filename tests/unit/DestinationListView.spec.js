@@ -59,7 +59,6 @@ function createSuccessfullDataProvider() {
 function createFailedDataProvider() {
   return {
     fetchData() {
-      console.log("I am here!!")
       return Promise.reject("Something bad happened");
     }
   }
